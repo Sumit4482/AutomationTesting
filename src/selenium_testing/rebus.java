@@ -7,17 +7,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class rebus {
-public static void main(String[] args) {
+public static void main(String[] args) throws InterruptedException {
 	WebDriver d = new ChromeDriver();
-	 Actions act = new Actions(d);
-	 d.get("https://www.redbus.in/");
-	 WebElement help = d.findElement(By.xpath("//I[@class='icon icon-help_new icon_rb_secondary_item']/self::I"));
-	 help.click();
-	  
-	 WebElement myAccountParent = d.findElement(By.xpath("//span[@class='name_rb_secondary_item'][text()='My Account']"));
-     act.moveToElement(myAccountParent).perform();
+	 
+	   d.get("https://www.redbus.in/");
+ 
+       WebElement Account = d.findElement(By.xpath("(//DIV[@class='rb_main_secondary_item  link'])[2]"));
+       WebElement Details = d.findElement(By.id("ticket_details"));	 
 
-	WebElement myticket = d.findElement(By.xpath("//LI[@id='ticket_details']//SPAN[@class='header_dropdown_item_name'][text()='Show My Ticket']"));
-	myticket.click();
+       Actions actions = new Actions(d);
+       actions.moveToElement(Account).click().perform();
+       Thread.sleep(2000);
+       actions.moveToElement(Details).perform();
+       Thread.sleep(2000);
+       actions.click(Details).perform();
+       
 }
 }

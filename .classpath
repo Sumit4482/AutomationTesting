@@ -66,5 +66,8 @@
 	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/selenium-java-4.19.1/selenium-chrome-driver-4.19.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/selenium-java-4.19.1/selenium-chrome-driver-4.19.1-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/selenium-java-4.19.1/selenium-chromium-driver-4.19.1-sources.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/slf4j-simple-1.7.7.jar/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/slf4j-api-1.7.7.jar/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
